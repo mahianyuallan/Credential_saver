@@ -11,16 +11,16 @@ class TestUser(unittest.TestCase):
         '''
           Runs before the tests
         '''
-        self.new_user = User("Ayieko","0712345678","someone@gmail.com","Coolant");
+        self.new_user = User("Allan","0712345678","someone@gmail.com","Whatever");
         
     def test_init(self):
         '''
           Test to check if the object is initialized properly
         '''
-        self.assertEqual(self.new_user.user_name,"Ayieko")
+        self.assertEqual(self.new_user.user_name,"Allan")
         self.assertEqual(self.new_user.phone_number,"0712345678")
         self.assertEqual(self.new_user.email,"someone@gmail.com")
-        self.assertEqual(self.new_user.password,"Coolant")
+        self.assertEqual(self.new_user.password,"Whatever")
        
     def test_save_user(self):
         '''
@@ -40,7 +40,7 @@ class TestUser(unittest.TestCase):
            test to confirm we can store more than one object
         '''
         self.new_user.save_user()
-        test_user = User("Omondi-Timon","WhatATimeToBeAlive2k")
+        test_user = User("Carl-Max","WhatATimeToBeAlive2k")
         test_user.save_user()
         self.assertEqual(len(User.user_list),2)
         
@@ -49,7 +49,7 @@ class TestUser(unittest.TestCase):
          Test to confirm we are able to remove an object from our list
         '''
         self.new_user.save_user()
-        test_user = User("Omondi-Timon","WhatATimeToBeAlive2k")
+        test_user = User("Carl-Max","WhatATimeToBeAlive2k")
         test_user.save_user()
         self.new_user.delete_user()
         self.assertEqual(len(User.user_list),1)
