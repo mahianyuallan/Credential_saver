@@ -2,7 +2,7 @@ import pyperclip
 import random
 class Credentials:
     credential_list = []
-    password_list = ["Bully911","Champez254","Lildurk7","XotourUzi1","Emergingh20","dIvergencE666","ModuloFanForum11","Oldtraffordseat12"]
+    password_list = ["Allan","Champez254","Lildurk7","XotourUzi1","Emergingh20","dIvergencE666","ModuloFanForum11","Oldtraffordseat12"]
     random_password = random.choice(password_list)
     def __init__(self,application_name,password):
         self.application_name = application_name
